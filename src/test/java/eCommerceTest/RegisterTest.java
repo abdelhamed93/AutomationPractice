@@ -6,7 +6,9 @@ import org.testng.annotations.Test;
 
 public class RegisterTest extends BaseTest {
 
-	public String gmailGenerator = "xyz+" + Math.random() * 100000 + "@gmail.com";
+	public String gmailGenerator () {
+		return "xyz+" + Math.random() * 100000 + "@gmail.com";
+	}
 
 	
 	// check register with valid creds of new user 
@@ -17,7 +19,7 @@ public class RegisterTest extends BaseTest {
 		homePage.clickOn_signIn_btn();
 		// waitTillElementAppear(authPage.getCreateAnAccount_btn());
 		// Head to login/SignUp screen
-		authPage.setSignUp_email(gmailGenerator);
+		authPage.setSignUp_email(gmailGenerator());
 		authPage.clickOn_createAccount_btn();
 
 		// Head to Registration screen
@@ -44,7 +46,7 @@ public class RegisterTest extends BaseTest {
 		homePage.clickOn_signIn_btn();
 		// waitTillElementAppear(authPage.getCreateAnAccount_btn());
 		// Head to login/SignUp screen
-		authPage.setSignUp_email(gmailGenerator);
+		authPage.setSignUp_email(gmailGenerator());
 		authPage.clickOn_createAccount_btn();
 
 		// Head to Registration screen
