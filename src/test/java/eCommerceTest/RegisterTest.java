@@ -12,6 +12,7 @@ public class RegisterTest extends BaseTest {
 
 	
 	// check register with valid creds of new user 
+	//
 	@Test
 	public void verifyRegisterNewUser() {
 
